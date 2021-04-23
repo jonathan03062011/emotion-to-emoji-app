@@ -47,6 +47,28 @@ function check()
      }
      else{
          console.log(result);
-         
+         document.getElementById("emotion_name").innerHTML=result[0].label;
+         document.getElementById("emotion_2").innerHTML=result[0].label;
+         prediction_1=result[0].label;
+         prediction_2=result[0].label;
+         speak();
+         if(prediction_1=="angry"){
+             document.getElementById("emoji").innerHTML="&#128548";
+         }
+         if(prediction_1=="sad"){
+            document.getElementById("emoji").innerHTML="&#128532";
+        }
+        if(prediction_1=="happy"){
+            document.getElementById("emoji").innerHTML="&#128522";
+        }
+        if(prediction_2=="angry"){
+            document.getElementById("emoji_2").innerHTML="&#128548";
+        }
+        if(prediction_2=="sad"){
+           document.getElementById("emoji_2").innerHTML="&#128532";
+       }
+       if(prediction_2=="happy"){
+           document.getElementById("emoji_2").innerHTML="&#128522";
+       }
      }
  }
