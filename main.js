@@ -35,3 +35,18 @@ function speak()
     synth.speak(utterthis);
 }
 
+function check()
+{
+    var img=document.getElementById("captured_image");
+    classifier.classify(img,gotresults);
+}
+ function gotresults(error,result)
+ {
+     if(error){
+         console.log(error);
+     }
+     else{
+         console.log(result);
+         
+     }
+ }
